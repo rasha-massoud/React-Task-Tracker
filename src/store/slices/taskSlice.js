@@ -15,7 +15,7 @@ export const taskSlice = createSlice ({
                 day: action.payload.day,
                 reminder: action.payload.reminder
             }
-            state.tasks.push(todo)
+            state.tasks.push(task)
         },
         removeTask: (state, action) => {
             state.tasks = state.tasks.filter((task) => task.id !== action.payload)
