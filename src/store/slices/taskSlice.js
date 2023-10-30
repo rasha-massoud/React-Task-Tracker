@@ -19,10 +19,18 @@ export const taskSlice = createSlice ({
         },
         removeTask: (state, action) => {
             state.tasks = state.tasks.filter((task) => task.id !== action.payload)
-        }        
+        },
+        updateTaskReminder: (state, action) => {
+            state.tasks = state.tasks.map((task) => {
+                if (task.id === action.payload) {
+                  return { ...task, reminder: !task.reminder };
+                }
+                return task;
+            })
+        }
     }
 })
 
-export const { addTask, removeTask } = taskSlice.actions;
+export const { addTask, removeTask, updateTaskReminder } = taskSlice.actions;
 
 export default taskSlice.reducer;
