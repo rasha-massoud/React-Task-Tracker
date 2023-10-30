@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
+import Footer from "./components/Footer";
 
 function App() {
   const [ showAddTask, setShowAddTask] = useState(false)
@@ -22,6 +23,8 @@ function App() {
       ) : (
         "No Tasks To Show!"
       )}
+
+      <Footer />
     </div>
   );
 }

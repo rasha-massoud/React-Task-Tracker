@@ -14,7 +14,7 @@ body {
   max-width: 60%;
   margin: 3% auto;
   overflow: auto;
-  min-height: 30rem;
+  min-height: auto;
   border: 1px solid steelblue;
   padding: 2%;
   border-radius: 5px;
@@ -109,6 +109,6 @@ body {
 }
 
 footer {
-  margin-top: 3%;
+  margin-top: 7%;
   text-align: center;
 }
