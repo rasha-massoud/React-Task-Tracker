@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa"
 import { useDispatch } from "react-redux"
-import { removeTask } from "../../store/slices/TaskSlice"
+import { removeTask, updateTaskReminder } from "../../store/slices/TaskSlice"
 
 const Task = ({ task }) => {
 
@@ -10,8 +10,15 @@ const Task = ({ task }) => {
         dispatch(removeTask(id))
     }
 
+    const toggleReminder = (id) => {
+        dispatch(updateTaskReminder(id))
+    }
+
     return (
-        <div className={`task ${task.reminder && 'reminder'}`}>
+        <div 
+            className={`task ${task.reminder && 'reminder'}`}
+            onDoubleClick={() => toggleReminder(task.id)}
+        >
             <h3>
                 {task.text}{' '}
                 <FaTimes 
