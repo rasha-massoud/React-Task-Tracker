@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useState } from "react";
 import Header from "./components/Header";
-import AddTask from "./components/AddTask"
+import AddTask from "./components/AddTask";
+import Tasks from "./components/Tasks";
 
 function App() {
   const [ showAddTask, setShowAddTask] = useState(false)
@@ -14,6 +15,7 @@ function App() {
         showAdd={showAddTask}
       />
       {showAddTask && <AddTask onAdd={addTask} />}
+      <Tasks />
     </div>
   );
 }
