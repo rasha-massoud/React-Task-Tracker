@@ -1,16 +1,15 @@
 import Task from "../Task"
 import { useSelector } from "react-redux"
 
-const Tasks = ({ onDelete }) => {
+const Tasks = () => {
 
     const tasks = useSelector((state) => state.tasks)
 
-    console.log(tasks)
     return (
         <>
             {
                 tasks.map((task, index) => (
-                    <Task key={index} task={task} onDelete={onDelete} />
+                    <Task key={index} task={task} />
                 ))
             }
         </>
