@@ -1,6 +1,15 @@
 import { FaTimes } from "react-icons/fa"
+import { useDispatch } from "react-redux"
+import { removeTask } from "../../store/slices/TaskSlice"
 
-const Task = ({ task, onDelete }) => {
+const Task = ({ task }) => {
+
+    const dispatch = useDispatch()
+
+    const onDelete = (id) => {
+        dispatch(removeTask(id))
+    }
+
     return (
         <div className="task">
             <h3>
