@@ -1,7 +1,7 @@
 import Task from "../Task"
 import { useSelector } from "react-redux"
 
-const Tasks = ({ tasks, onDelete }) => {
+const Tasks = ({ onDelete }) => {
 
     const tasks = useSelector((state) => state.tasks)
 
