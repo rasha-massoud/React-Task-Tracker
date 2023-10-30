@@ -107,3 +107,8 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+footer {
+  margin-top: 3%;
+  text-align: center;
+}
