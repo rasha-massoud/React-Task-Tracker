@@ -1,9 +1,13 @@
-import { useState } from "react"
+import React, { useState } from "react"
+import { useDispatch } from "react-redux"
+import { addTask } from "../../store/slices/taskSlice"
 
 const AddTask = () => {
     const [text, setText] = useState('')
     const [day, setDay] = useState('')
     const [reminder, setReminder] = useState(false)
+
+    const dispatch = useDispatch()
 
     const TextChanged = (e) => {
         setText(e.target.value)
@@ -29,7 +33,9 @@ const AddTask = () => {
             return
         }
 
-        // Add Data to the store
+        dispatch(addTask({
+            text, day, reminder
+        }))
 
         setText("")
         setDay("")
