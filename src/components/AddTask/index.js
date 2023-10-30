@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useDispatch } from "react-redux"
-import { addTask } from "../../store/slices/taskSlice"
+import { addTask } from "../../store/slices/TaskSlice"
 
 const AddTask = () => {
     const [text, setText] = useState('')
