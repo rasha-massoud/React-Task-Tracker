@@ -25,11 +25,7 @@ const AddTask = () => {
         e.preventDefault()
 
         if (!text) {
-            alert('Please add a task')
-            return
-        }
-        else if (!day) {
-            alert('Please add a day and time')
+            alert('Please add a Task')
             return
         }
 
