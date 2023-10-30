@@ -56,14 +56,14 @@ const AddTask = () => {
                     onChange={DayChanged}
                 />
             </div>
-            <div className="form-control">
-                <label>Set Reminder</label>
+            <div className="form-control-check">
                 <input
                     type="checkbox"
                     checked={reminder}
                     value={reminder}
                     onChange={ReminderChecked}
-                />
+                    />
+                <label>Set Reminder</label>
             </div>
 
             <input type="submit" value="Save Task" className="btn btn-block"/>
