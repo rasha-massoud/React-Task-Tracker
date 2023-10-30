@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-const Button = ({text, color, onClick}) => {
+const Button = ({ text, color, onClick }) => {
     return (
         <button 
             onClick={onClick} 
