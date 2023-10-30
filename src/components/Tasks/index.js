@@ -1,9 +1,6 @@
-import Task from "../Task"
-import { useSelector } from "react-redux"
+import Task from "../Task";
 
-const Tasks = () => {
-
-    const tasks = useSelector((state) => state.tasks)
+const Tasks = ({ tasks }) => {
 
     return (
         <>
