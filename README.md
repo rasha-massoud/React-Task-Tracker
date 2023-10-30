@@ -1,7 +1,5 @@
 # React Task Tracker App
 
-![App Screenshot](screenshot.png)
-
 This is a simple task tracker app built with React and Redux Toolkit. It allows users to add, delete, and mark tasks as important. It's a great example of how to manage application state using Redux Toolkit in a React application.
 
 ## Features
